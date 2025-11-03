@@ -4,7 +4,8 @@ import { OrbitControls, Environment, ContactShadows, useGLTF, Html } from '@reac
 import { addToShopifyCart, postResize } from './postMessage'
 
 // Prefilled values
-const GLB_URL = 'https://cdn.shopify.com/3d/models/cbf5c6a4b4ed515c/day6_full_arrow.glb'
+const RAW = 'https://cdn.shopify.com/3d/models/cbf5c6a4b4ed515c/day6_full_arrow.glb'
+const GLB_URL = `/api/proxy-glb?url=${encodeURIComponent(RAW)}`
 const DEFAULT_VARIANT_ID = '7408552673316'
 
 // Palettes
