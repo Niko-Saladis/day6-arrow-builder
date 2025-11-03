@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Day Six — Arrow Builder</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #0b0b0b; --panel: rgba(255,255,255,0.08); --glass: rgba(255,255,255,0.12);
+        --text: #e7ecef; --muted: #a9b1b8; --brand: #9fe8a7; --accent: #00d084;
+      }
+      html, body, #root { height: 100%; margin: 0; background: var(--bg); color: var(--text); }
+      * { box-sizing: border-box; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+      .glass { background: var(--glass); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.09); border-radius: 18px; }
+      .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05); }
+      .panel { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08); border-radius: 16px; }
+      .btn { display:inline-flex;align-items:center;justify-content:center;padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.12);color:var(--text);background:rgba(255,255,255,.05);cursor:pointer;transition:transform .15s, background .2s, border-color .2s; }
+      .btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.09); }
+      .btn.green { background: var(--accent); color: #001a0e; border-color: #00b173; }
+      .swatch { width:28px;height:28px;border-radius:999px;border:1px solid rgba(255,255,255,.2);cursor:pointer;transition:transform .1s, box-shadow .1s; }
+      .swatch:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.35); }
+      .swatch.selected { box-shadow: 0 0 0 2px var(--brand), 0 8px 18px rgba(0,0,0,.45); }
+      .row { display:grid;grid-template-columns:1fr 360px;gap:22px;padding:22px; }
+      @media (max-width:1024px){ .row { grid-template-columns: 1fr; } }
+      .canvas-wrap { height: clamp(60vh, 80vh, 86vh); border-radius: 20px; overflow: hidden; }
+      .sidebar { position: sticky; top: 16px; display:flex;flex-direction:column; gap:16px; }
+      .muted { color: var(--muted); font-size: 12px; }
+      .title { font-weight: 700; letter-spacing: .2px; font-size: 18px; }
+      .sub { font-weight: 600; font-size: 13px; margin-bottom: 8px; color: #cbd5dc; }
+      .toggle { display:inline-flex;padding:6px;border-radius:12px;gap:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1); }
+      .toggle button { padding: 8px 12px; border-radius: 10px; border: none; background: transparent; color: var(--text); cursor: pointer; }
+      .toggle button.active { background: rgba(255,255,255,.12); }
+      .badge { font-size: 11px; color: #0b2a19; background: var(--brand); padding: 4px 8px; border-radius: 999px; }
+      .topbar { display:flex; align-items:center; justify-content:space-between; margin: 14px 22px 0; }
+      .pulse { animation: pulse 2.2s ease-in-out infinite; }
+      @keyframes pulse { 0%{transform:translateY(0)} 50%{transform:translateY(-2px)} 100%{transform:translateY(0)} }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
