@@ -5,7 +5,8 @@ import { addToShopifyCart, postResize } from './postMessage'
 
 // Prefilled values
 const RAW = 'https://cdn.shopify.com/3d/models/cbf5c6a4b4ed515c/day6_full_arrow.glb'
-const GLB_URL = 'https://cdn.shopify.com/3d/models/cbf5c6a4b4ed515c/day6_full_arrow.glb'
+// TEMP sanity test
+const GLB_URL = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF-Binary/Duck.glb'
 const DEFAULT_VARIANT_ID = '7408552673316'
 
 // Palettes
