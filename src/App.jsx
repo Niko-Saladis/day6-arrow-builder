@@ -3,9 +3,9 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Environment, ContactShadows, useGLTF, Html, useProgress } from '@react-three/drei'
 
-// 1) Start with a known-good public GLB to confirm model loading works end-to-end.
-//    After you see the Duck, go to Step 2 and switch GLB_URL to your Day Six proxy URL.
-const GLB_URL = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF-Binary/Duck.glb'
+
+const RAW = 'https://cdn.shopify.com/3d/models/cbf5c6a4b4ed515c/day6_full_arrow.glb'
+const GLB_URL = `/api/proxy-glb?url=${encodeURIComponent(RAW)}`
 
 function LoaderOverlay() {
   const { active, progress, errors, item } = useProgress()
