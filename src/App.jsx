@@ -4,8 +4,8 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Environment, ContactShadows, useGLTF, Html, useProgress } from '@react-three/drei'
 
 
-const RAW = 'https://cdn.shopify.com/3d/models/cbf5c6a4b4ed515c/day6_full_arrow.glb'
-const GLB_URL = `/api/proxy-glb?url=${encodeURIComponent(RAW)}`
+const RAW = 'https://cdn.shopify.com/3d/models/cbf5c6a4b4ed515c/day6_full_arrow.glb';
+const GLB_URL = `/api/proxy-glb?url=${encodeURIComponent(RAW)}`;
 
 function LoaderOverlay() {
   const { active, progress, errors, item } = useProgress()
